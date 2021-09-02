@@ -1,12 +1,5 @@
 <!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport"
-          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
-</head>
 <style>
 /* Home */
     .home_screen{
@@ -35,7 +28,7 @@
     }
 
 /* Zoe Tán */
-    .site_title_text{
+    a.site_title_text{
     position: absolute;
     width: 144px;
     height: 42px;
@@ -49,6 +42,10 @@
     color: #000000;
     }
 
+    a {
+    text-decoration: none;
+    }
+
 /* navi_About */
     .navi_about{
     position: absolute;
@@ -58,7 +55,7 @@
     top: 39px;
     }
 /* About */
-    .navi_about_text{
+    a.navi_about_text{
     position: absolute;
     width: 53px;
     height: 21px;
@@ -83,7 +80,7 @@
     }
 
 /* Resume */
-    .navi_resume_text{
+    a.navi_resume_text{
     position: absolute;
     width: 69px;
     height: 21px;
@@ -108,7 +105,7 @@
     }
 
 /* Work */
-    .navi_work_text{
+    a.navi_work_text{
     position: absolute;
     width: 47px;
     height: 21px;
@@ -122,33 +119,62 @@
     /* identical to box height */
     color: #000000;
     }
+
+/* mouse over link */
+    a:hover {
+      background-color: #E9E0C7;
+    }
+
+/* Body */
+    .body_frame{
+    position: absolute;
+    width: 1207px;
+    height: 488px;
+    left: 112px;
+    top: 227px;
+    }
+
+
+
 </style>
+<head>
+    <title>{{ page.title }}</title>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
-
-<body>
-<div class="home_screen">
+    <div class="home_screen">
     <div class="Header">
         <div class="site_title">
-            <div class="site_title_text">
+            <a href="index.html" class="site_title_text">
                 Zoe Tán
-            </div>
+            </a>
         </div>
+
         <div class="navi_work">
-            <div class="navi_work_text">
+            <a href="work.html" class="navi_work_text">
                 Work
-            </div>
+            </a>
         </div>
         <div class="navi_resume">
-            <div class="navi_resume_text">
+            <a href="files/Zihan_Tan_Resume.pdf" class="navi_resume_text">
                 Resume
-            </div>
+            </a>
         </div>
         <div class="navi_about">
-            <div class="navi_about_text">
+            <a href="about.html" class="navi_about_text">
                 About
-            </div>
+            </a>
         </div>
     </div>
+
 </div>
+
+
+</head>
+
+<body>
+        {{ content }}
 </body>
 </html>
